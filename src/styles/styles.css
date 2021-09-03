@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  background-color: #f8ffc0;
+  font-family: Fantasy, Arial, Helvetica, sans-serif; }
+  body h1,
+  body h2 {
+    text-align: center; }
+  body .animation {
+    animation: shake 1s; }
+  body .lostAnimation {
+    animation: fade 2s; }
+  body .winAnimation {
+    animation: size-bigger 1s; }
+  body .textAnimation {
+    animation: rotate 1s; }
+  body .game-show {
+    display: flex;
+    margin: 2em 0;
+    padding-bottom: 4em;
+    border-bottom: 1px solid black; }
+    body .game-show .game-option {
+      border: 1px solid black;
+      width: 15em;
+      height: 12em;
+      border-radius: 1em;
+      margin: 0 auto;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.85; }
+      body .game-show .game-option .rock,
+      body .game-show .game-option .paper,
+      body .game-show .game-option .scissor,
+      body .game-show .game-option .question {
+        background-size: 80%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center; }
+      body .game-show .game-option .rock {
+        background-image: url("../assets/images/rock.png"); }
+      body .game-show .game-option .paper {
+        background-image: url("../assets/images/paper.png"); }
+      body .game-show .game-option .scissor {
+        background-image: url("../assets/images/scissors.png"); }
+      body .game-show .game-option .question {
+        background-image: url("../assets/images/question.png");
+        background-size: 60%; }
+      body .game-show .game-option:first-child {
+        background-color: #ff3b5d; }
+      body .game-show .game-option:nth-of-type(2) {
+        background-color: #3bff77; }
+      body .game-show .game-option p {
+        text-align: center; }
+  body .result {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: cursive;
+    font-size: 1.5em; }
+    body .result p {
+      display: inline-block;
+      margin: 0; }
+  body .rock {
+    background-image: url("../assets/images/rock.png"); }
+  body .paper {
+    background-image: url("../assets/images/paper.png"); }
+  body .scissor {
+    background-image: url("../assets/images/scissors.png"); }
+  body .options {
+    display: flex; }
+    body .options button {
+      width: 12em;
+      height: 10em;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 1em 1em 1em 0em rgba(0, 0, 0, 0.5);
+      border-radius: 1em;
+      background-color: pink;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: center; }
+      body .options button:hover, body .options button:focus {
+        opacity: 0.85;
+        cursor: pointer;
+        transform: rotate(20deg);
+        transition: .15s; }
+      body .options button img {
+        display: inline-block;
+        width: 100%; }
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
+
+@keyframes size-bigger {
+  0% {
+    background-size: 80%; }
+  100% {
+    background-size: 100%; } }
+
+@keyframes size-smaller {
+  0% {
+    background-size: 80%; }
+  100% {
+    background-size: 0%; } }
+
+@keyframes fade {
+  0% {
+    background-position: center; }
+  100% {
+    background-position: -500%; } }
+
+@keyframes shake {
+  10%,
+  40%,
+  80% {
+    transform: rotate(20deg); }
+  20%,
+  40%,
+  60%,
+  55% {
+    transform: rotate(-10deg); }
+  15%,
+  45%,
+  85% {
+    transform: rotate(10deg); }
+  0%,
+  30%,
+  60%,
+  100% {
+    transform: rotate(0deg); }
+  5%,
+  35%,
+  65%,
+  95% {
+    transform: rotate(5deg); }
+  25%,
+  15%,
+  45%,
+  75% {
+    transform: rotate(-5deg); } }
